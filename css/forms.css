@@ -30,3 +30,44 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+.webform {
+  display: block;
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 1px;
+}
+
+.form-group:has(:required) {
+  label:after {
+    content: "*";
+    color: rgb(0, 0, 0);
+  }
+}
+.form-group:has(:user-invalid) {
+  input {
+    outline: 3px solid rgba(224, 162, 74, 0.806);
+    border-color: rgb(228, 50, 50);
+  }
+}
+
+.error-message {
+  display: none;
+}
+
+#form-section {
+  background-color: rgb(212, 226, 193);
+  border-radius: 2ex;
+  padding: 10ex;
+}

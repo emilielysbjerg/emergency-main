@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,16 +37,83 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Få ideer til aktivivteter i stormvejr her</h2>
+          <p>Udfyld denne formular og inspireret til aktiviter i stormvejr</p>
         </article>
-        <form id="webform"></form>
+        <form>
+          <section id="form-section-1">
+            <div class="form-group">
+              <label for="fornavn">Fornavn</label>
+              <input required type="tekst" id="fornavn" name="fornavn" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="efternavn">Efternavn</label>
+              <input required type="tekst" id="efternavn" name="efternavn" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="alder">Alder</label>
+              <input required type="alder" id="alder" name="alder" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+          </section>
+
+          <section id="form-section-2">
+            <div class="form-group">
+              <label for="form-group">Adresse</label>
+              <input required type="adresse" id="adresse" name="adresse" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="form-group">By</label>
+              <input required type="by" id="by" name="by" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group"></div>
+            <label for="form-group">Postnummer</label>
+            <input
+              minlength="5"
+              required
+              type="postnummer"
+              id="postnummer"
+              name="postnummer"
+            />
+          </section>
+
+          <p class="error-message">Please enter a value</p>
+          <div class="form-group">
+            <label for="terms">
+              <input
+                required
+                type="checkbox"
+                id="terms"
+                name="accept_terms"
+                value="yes"
+              />
+              Accept terms
+            </label>
+          </div>
+
+          <h2></h2>
+
+          <button>Send formular</button>
+        </form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
+        <h2>Opsamling (output)</h2>
+        <div>
+          <p>Fornavn: <span id="fornavn_output"></span></p>
+          <p>Efternavn: <span id="efternavn_output"></span></p>
+          <p>Alder: <span id="alder_output"></span></p>
+          <p>Adresse: <span id="adresse_output"></span></p>
+          <p>By: <span id="by_output"></span></p>
+          <p>Postnummer: <span id="postnummer_output"></span></p>
+        </div>
       </section>
     </main>
     <footer>
@@ -76,6 +143,6 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/forms.js"></script>
   </body>
 </html>

@@ -43,7 +43,8 @@
 
 .my_scale {
   transform: scale(1.3);
+  transition: 2s;
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  fill: pink !important;
+  fill: rgb(57, 151, 246) !important;
 }

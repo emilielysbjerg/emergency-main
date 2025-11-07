@@ -1,9 +1,15 @@
 console.log("Loaded instructions...");
 
-document.querySelector("#sars").addEventListener("click", sarsF);
+document.querySelector("#cirkel_nede").addEventListener("click", vandmelonF);
 
-function sarsF() {
-  console.log("sarsF er in da house");
+document.querySelector("#cirkel_midte").addEventListener("click", vandmelonF);
 
+document.querySelector("#cirkel_nede").addEventListener("click", vandmelonF);
+
+function vandmelonF() {
+  console.log("glad.vandmelon");
   document.querySelector("#Hotspots").classList.add("my_scale");
+  document.querySelector("Hotspots").computedStyleMap.fill = "green";
 }
+
+document.querySelector(".info.text h2").textContent = "vandmelon";
